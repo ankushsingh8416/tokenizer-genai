@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { Copy, RotateCcw } from "lucide-react"
+import { Copy, Github, Linkedin, RotateCcw, Twitter, User } from "lucide-react"
 import toast from "react-hot-toast";
 
 // Simple tokenizer simulation - in reality this would use a proper tokenizer
@@ -229,13 +229,42 @@ export default function TokenizerPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 p-4">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Header */}
-        <div className="text-center py-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            <span className="text-orange-600">Tokenizer Project</span> for Chai aur GenAI
-          </h1>
-          <p className="text-gray-600">
-            Explore tokenization and its impact on AI models — sip your chai while you learn.
-          </p>
+        <div className="flex justify-between items-center">
+          <div className="text-left py-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              <span className="text-orange-600">Tokenizer Project</span> for Chai aur GenAI
+            </h1>
+            <p className="text-gray-600">
+              Explore tokenization and its impact on AI models — sip your chai while you learn.
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            {/* GitHub */}
+            <a href="https://github.com/ankushsingh8416?tab=repositories" className="group flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-white rounded-lg transition-all duration-200 hover:shadow-md">
+              <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="font-medium">GitHub</span>
+            </a>
+
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/in/ankush8416/" className="group flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-white rounded-lg transition-all duration-200 hover:shadow-md">
+              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="font-medium">LinkedIn</span>
+            </a>
+
+            {/* Twitter */}
+            <a href="https://x.com/AnkushRajp80867?t=I0PxUl2n7dSK09BllQX-3g&s=09" className="group flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-sky-500 hover:bg-white rounded-lg transition-all duration-200 hover:shadow-md">
+              <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="font-medium">Twitter</span>
+            </a>
+
+            {/* Portfolio */}
+            <a href="https://portfolio-ankush-tech.netlify.app/" className="group flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-white rounded-lg transition-all duration-200 hover:shadow-md">
+              <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="font-medium">Portfolio</span>
+            </a>
+          </div>
+
+
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">
@@ -292,7 +321,7 @@ export default function TokenizerPage() {
                 <Button variant="outline" size="sm" onClick={() => copyToClipboard(tokenIds.join(", "))}>
                   Copy Encoded IDs
                 </Button>
-                
+
               </div>
             </CardContent>
           </Card>

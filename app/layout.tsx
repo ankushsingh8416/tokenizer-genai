@@ -5,9 +5,9 @@ import './globals.css'
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Tokenizer-genai',
+  description: 'Tokenizer-genai',
+  generator: 'Ankush Rajput',
 }
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ html {
         `}</style>
       </head>
       <body>
-              <Toaster position="top-center" reverseOrder={true} />
+        <Toaster position="top-center" reverseOrder={true} />
 
         {children}</body>
     </html>
